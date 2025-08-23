@@ -1,2 +1,2 @@
 # ShopPal
-An Online 
+An Online shopping application
