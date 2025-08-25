@@ -1,0 +1,22 @@
+services:
+  mongoDb:
+    image: mongo:8.0.0
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: product-service
+    volumes:
+        - ./data/mongodb:/data/db
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+        MYSQL_ROOT_PASSWORD: mysql
+        MYSQL_DATABASE: order-service
+    volumes:
+        - ./data/mysql:/var/lib/mysql
