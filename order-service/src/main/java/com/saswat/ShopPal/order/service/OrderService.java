@@ -2,7 +2,7 @@ package com.saswat.ShopPal.order.service;
 
 import com.saswat.ShopPal.order.client.InventoryClient;
 import com.saswat.ShopPal.order.dto.OrderRequest;
-import com.saswat.ShopPal.order.event.OrderPlacedEvent;
+import com.saswat.ShopPal.avro.event.OrderPlacedEvent;
 import com.saswat.ShopPal.order.model.Order;
 import com.saswat.ShopPal.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
