@@ -1,6 +1,6 @@
 package com.saswat.ShopPal.notification.service;
 
-import com.saswat.ShopPal.avro.event.OrderPlacedEvent;
+import com.saswat.ShopPal.order.event.OrderPlacedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -26,7 +26,7 @@ public class NotificationService {
             messageHelper.setTo(orderPlacedEvent.getEmail().toString());
             messageHelper.setSubject(String.format("Your Order with OrderNumber %s is placed successfully", orderPlacedEvent.getOrderNumber()));
             messageHelper.setText(String.format("""
-                    Hi,
+                    Hi, %s,%s
                     
                     Your order with order number %s is placed successfully.
                     Best Regards
