@@ -1,6 +1,6 @@
 package com.saswat.ShopPal.notification.service;
 
-import com.saswat.ShopPal.order.event.OrderPlacedEvent;
+import com.saswat.ShopPal.avro.event.OrderPlacedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
