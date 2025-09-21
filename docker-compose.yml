@@ -34,7 +34,7 @@ services:
 
   broker:
     image: confluentinc/cp-kafka:7.6.0
-    container_name: broker
+    container_name: kafka
     ports:
       - "9092:9092"
       - "29092:29092"
@@ -102,3 +102,5 @@ services:
       - ./docker/keycloak/realms/:/opt/keycloak/data/import/
     depends_on:
       - keycloak-mysql
+
+
