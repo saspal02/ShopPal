@@ -137,6 +137,10 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+		</dependency>
 
 		<!-- Added explicitly to override a vulnerable transitive version (CVE-2025-48924) -->
 		<dependency>
@@ -144,6 +148,7 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.18.0</version>
 		</dependency>
+
 		<!-- Added explicitly to override vulnerable transitive versions (CVE-2024-25710, CVE-2024-26308) -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>

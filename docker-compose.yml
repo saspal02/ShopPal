@@ -103,4 +103,13 @@ services:
     depends_on:
       - keycloak-mysql
 
+  consul:
+      container_name: consul
+      image: hashicorp/consul:1.17
+      ports:
+        - "8500:8500"
+        - "8600:8600/udp"
+      command: agent -dev -client=0.0.0.0
+
+
 
